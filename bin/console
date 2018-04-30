@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+#
+# frozen_string_literal: true
+
+lib = File.expand_path('../lib', __dir__)
+
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'bundler/setup'
+require 'companies_house_hub'
+require 'dotenv'
+
+Dotenv.load
+
+CompaniesHouseHub.configure do |config|
+  config.api_key = ENV['API_KEY']
+end
+
+# Allow direct access to CompaniesHouseHub classes
+include CompaniesHouseHub
+
+require 'pry'
+Pry.start

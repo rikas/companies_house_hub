@@ -1,0 +1,23 @@
+Metrics/AbcSize:
+  Max: 30
+
+Style/Documentation:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/MethodLength:
+  Max: 50
+
+Metrics/BlockLength:
+  Max: 150
+
+Metrics/ModuleLength:
+  Max: 200
+
+Metrics/AbcSize:
+  Max: 70
