@@ -36,7 +36,6 @@ module CompaniesHouseHub
     end
 
     def initialize(json = {})
-      p json
       @number = json.dig(:company_number)
       @has_been_liquidated = json.dig(:has_been_liquidated)
       @jurisdiction = json.dig(:jurisdiction)
