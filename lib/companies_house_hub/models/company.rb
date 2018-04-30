@@ -17,7 +17,7 @@ module CompaniesHouseHub
     alias date_of_creation created_at
     alias company_status status
 
-    def self.search(name, per_page:, start:)
+    def self.search(name, per_page: nil, start: nil)
       options = { q: name, items_per_page: per_page, start_index: start }
 
       result = get(SEARCH_PATH, options)
