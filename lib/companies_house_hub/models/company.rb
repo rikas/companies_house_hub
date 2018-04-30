@@ -9,10 +9,13 @@ module CompaniesHouseHub
     SEARCH_PATH = '/search'
     FIND_PATH = '/company/:company_number'
 
-    attr_reader :number, :name, :created_at, :address
+    attr_reader :number, :name, :created_at, :address, :type, :jurisdiction, :has_been_liquidated
+    attr_reader :status
 
     alias company_number number
     alias company_name name
+    alias date_of_creation created_at
+    alias company_status status
 
     def self.search(name, per_page:, start:)
       options = { q: name, items_per_page: per_page, start_index: start }
@@ -40,6 +43,7 @@ module CompaniesHouseHub
       @created_at = json.dig(:date_of_creation)
       @address = Address.new(json.dig(:registered_office_address))
       @status = json.dig(:company_status)
+      @type = json.dig(:type)
     end
 
     def filing_histories
