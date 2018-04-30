@@ -14,7 +14,7 @@ module CompaniesHouseHub
 
       # If "made_up_date" exists then replace it with the filing date and don't include filing.date
       # in the file name (made_up_date will be used).
-      if name.match?(/{.*}/)
+      if name =~ /{.*}/
         name = replace_placeholders(name)
         date = nil
       end
