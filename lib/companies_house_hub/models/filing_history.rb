@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
+require 'companies_house_hub/filing_history_formatter'
+
 module CompaniesHouseHub
   class FilingHistory < BaseModel
     DOCUMENT_URL = 'https://beta.companieshouse.gov.uk'
     FIND_PATH = '/company/:company_number/filing-history'
     DEFAULT_PER_PAGE = 100
 
-    attr_reader :description, :action_date, :date, :type, :barcode, :links
+    attr_reader :description, :action_date, :date, :type, :barcode, :links, :description_values
 
     def self.all(options = {})
       options[:items_per_page] ||= DEFAULT_PER_PAGE
@@ -25,6 +27,11 @@ module CompaniesHouseHub
       @type = json.dig(:type)
       @barcode = json.dig(:barcode)
       @links = json.dig(:links)
+      @description_values = json.dig(:description_values)
+    end
+
+    def formatted_name
+      FilingHistoryFormatter.new(self).formatted
     end
 
     def url(format = 'pdf')

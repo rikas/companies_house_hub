@@ -29,4 +29,12 @@ module CompaniesHouseHub
   def configure
     yield configuration
   end
+
+  def root
+    File.expand_path('../', __dir__)
+  end
+
+  def load_yml(name)
+    YAML.load_file(File.join(root, 'data', "#{name}.yml"))
+  end
 end
