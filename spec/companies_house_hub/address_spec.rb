@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe CompaniesHouseHub::Address do
   describe '#full' do
     it 'returns the full address correctly' do
