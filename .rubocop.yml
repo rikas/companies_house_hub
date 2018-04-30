@@ -1,3 +1,5 @@
+require: rubocop-rspec
+
 Metrics/AbcSize:
   Max: 30
 
@@ -21,3 +23,10 @@ Metrics/ModuleLength:
 
 Metrics/AbcSize:
   Max: 70
+
+Lint/UselessAssignment:
+  Exclude:
+    - spec/data/*
+
+RSpec/ExampleLength:
+  Max: 100

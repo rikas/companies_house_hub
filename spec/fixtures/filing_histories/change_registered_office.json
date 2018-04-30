@@ -1,0 +1,19 @@
+{
+  "links": {
+    "self": "/company/08846630/filing-history/MzE4NzAyNzIxMWFkaXF6a2N4",
+    "document_metadata": "https://document-api.companieshouse.gov.uk/document/UX73jvH3eWbCCWGAa_3J6BuWcdZ14qoncdFzSTFxZvw"
+  },
+  "type": "AD01",
+  "description": "change-registered-office-address-company-with-date-old-address-new-address",
+  "date": "2017-10-05",
+  "action_date": "2017-10-05",
+  "category": "address",
+  "description_values": {
+    "new_address": "Linen Hall 162 - 168 Regent Street London W1B 5TD",
+    "change_date": "2017-10-05",
+    "old_address": "C/O Rsm Davidson House Forbury Square Reading RG1 3EU"
+  },
+  "pages": 1,
+  "barcode": "X6GBXDMY",
+  "transaction_id": "MzE4NzAyNzIxMWFkaXF6a2N4"
+}

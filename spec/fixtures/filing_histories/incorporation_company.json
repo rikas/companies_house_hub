@@ -1,0 +1,14 @@
+{
+  "date": "2014-01-15",
+  "category": "incorporation",
+  "description": "incorporation-company",
+  "type": "NEWINC",
+  "links": {
+    "document_metadata": "https://document-api.companieshouse.gov.uk/document/PMSNzVpkqJxgngN4nf0Xt-87pEFkBXv9bySiOCBtVao",
+    "self": "/company/08846630/filing-history/MzA5MjY2NjQxMWFkaXF6a2N4"
+  },
+  "pages": 22,
+  "paper_filed": true,
+  "barcode": "X2ZMK2Y3",
+  "transaction_id": "MzA5MjY2NjQxMWFkaXF6a2N4"
+}

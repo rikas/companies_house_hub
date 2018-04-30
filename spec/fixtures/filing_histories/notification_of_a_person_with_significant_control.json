@@ -1,0 +1,19 @@
+{
+  "category": "persons-with-significant-control",
+  "type": "PSC01",
+  "links": {
+    "self": "/company/08846630/filing-history/MzE5OTE1NjY5NmFkaXF6a2N4",
+    "document_metadata": "https://document-api.companieshouse.gov.uk/document/DSVn0eeTVHdLzO0z-sUYOYRfDncIE_BF8cav15x6vn8"
+  },
+  "subcategory": "notifications",
+  "date": "2018-03-02",
+  "action_date": "2017-06-01",
+  "description_values": {
+    "notification_date": "2017-06-01",
+    "psc_name": "Christopher Geoffrey Douglas Hooper"
+  },
+  "description": "notification-of-a-person-with-significant-control",
+  "pages": 2,
+  "barcode": "X70UA9MW",
+  "transaction_id": "MzE5OTE1NjY5NmFkaXF6a2N4"
+}

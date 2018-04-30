@@ -45,7 +45,7 @@ module CompaniesHouseHub
       replaced = text.dup
 
       matches.each do |match|
-        value = @filing_history.description_values[match.to_sym]
+        value = @filing_history.description_values.dig(match.to_sym)
         replaced.sub!(/{#{match}}/, value)
       end
 

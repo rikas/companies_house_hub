@@ -1,0 +1,18 @@
+{
+  "date": "2017-07-28",
+  "description": "accounts-with-accounts-type-micro-entity",
+  "action_date": "2016-12-31",
+  "type": "AA",
+  "description_values": {
+    "made_up_date": "2016-12-31"
+  },
+  "category": "accounts",
+  "links": {
+    "self": "/company/08846630/filing-history/MzE4MTYwNTUxNGFkaXF6a2N4",
+    "document_metadata": "https://document-api.companieshouse.gov.uk/document/QZZtG38WrkFLqVeukT-MIwPjPLJ3Dn7byF9szcirb9A"
+  },
+  "paper_filed": true,
+  "pages": 6,
+  "barcode": "J6BHT7LF",
+  "transaction_id": "MzE4MTYwNTUxNGFkaXF6a2N4"
+}
