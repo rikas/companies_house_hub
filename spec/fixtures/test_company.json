@@ -1,0 +1,31 @@
+{
+  "company_number":  "08846630",
+  "has_been_liquidated":  false,
+  "jurisdiction":  "england-wales",
+  "company_name":  "My company",
+  "date_of_creation":  "2014-01-15",
+  "company_status":  "active",
+  "type":  "ltd",
+  "accounts":  {
+    "accounts":  {
+      "next_made_up_to":  "2017-12-31",
+      "accounting_reference_date":  {
+        "day":  "31",
+        "month":  "12"
+      },
+      "overdue":  false,
+      "next_accounts":  {
+        "period_end_on":  "2017-12-31",
+        "period_start_on":  "2017-01-01",
+        "overdue":  false,
+        "due_on":  "2018-09-30"
+      }
+    }
+  },
+  "registered_office_address":  {
+    "address_line_1":  "Line1",
+    "address_line_2":  "Line2",
+    "locality":  "Local",
+    "postal_code": "POSTAL"
+  }
+}

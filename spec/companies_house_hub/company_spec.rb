@@ -1,23 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe CompaniesHouseHub::Company do
-  let(:company_json) do
-    {
-      company_number: '08846630',
-      has_been_liquidated: false,
-      jurisdiction: 'england-wales',
-      company_name: 'My company',
-      date_of_creation: '2014-01-15',
-      company_status: 'active',
-      type: 'ltd',
-      registered_office_address: {
-        address_line_1: 'Line1',
-        address_line_2: 'Line2',
-        locality: 'Local',
-        'postal_code': 'POSTAL'
-      }
-    }
-  end
+  let(:company_json) { json_data('test_company') }
 
   it 'has readers for all instance variables' do
     company = described_class.new(company_json)
