@@ -10,7 +10,7 @@ module CompaniesHouseHub
     FIND_PATH = '/company/:company_number'
 
     attr_reader :number, :name, :created_at, :address, :type, :jurisdiction, :has_been_liquidated
-    attr_reader :status, :accounts
+    attr_reader :status, :accounts, :full_address
 
     alias company_number number
     alias company_name name
@@ -45,14 +45,11 @@ module CompaniesHouseHub
       @status = json.dig(:company_status)
       @type = json.dig(:type)
       @accounts = json.dig(:accounts)
+      @full_address = @address.full
     end
 
     def filing_histories
       FilingHistory.all(company_number: @number)
-    end
-
-    def full_address
-      @address.full
     end
 
     def active?
