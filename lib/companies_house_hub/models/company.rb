@@ -22,7 +22,7 @@ module CompaniesHouseHub
 
       result = get(SEARCH_PATH, options)
 
-      result.body.each { |company_json| new(company_json) }
+      result.body[:items].map { |company_json| new(company_json) }
     end
 
     def self.find(company_number, params = {})
@@ -36,16 +36,17 @@ module CompaniesHouseHub
     end
 
     def initialize(json = {})
+      p json
       @number = json.dig(:company_number)
       @has_been_liquidated = json.dig(:has_been_liquidated)
       @jurisdiction = json.dig(:jurisdiction)
-      @name = json.dig(:company_name)
+      @name = json.dig(:company_name) || json.dig(:title)
       @created_at = json.dig(:date_of_creation)
-      @address = Address.new(json.dig(:registered_office_address))
+      @address = Address.new(json.dig(:registered_office_address) || json.dig(:address))
       @status = json.dig(:company_status)
-      @type = json.dig(:type)
+      @type = json.dig(:type) || json.dig(:company_type)
       @accounts = json.dig(:accounts)
-      @full_address = @address.full
+      @full_address = json.dig(:address_snippet) || @address.full
     end
 
     def filing_histories
