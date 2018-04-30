@@ -34,3 +34,6 @@ RSpec/ExampleLength:
 # To be compatible with older versions of ruby
 Performance/RegexpMatch:
   Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false

@@ -4,7 +4,7 @@ require 'companies_house_hub/base_model'
 
 module CompaniesHouseHub
   class Address < BaseModel
-    attr_reader :address_line_1, :address_line_2, :postal_code, :locality, :country
+    attr_reader :address_line1, :address_line2, :postal_code, :locality, :country
 
     def initialize(json = {})
       @address_line1 = json.dig(:address_line_1)
