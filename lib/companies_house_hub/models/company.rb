@@ -11,6 +11,9 @@ module CompaniesHouseHub
 
     attr_reader :number, :name, :created_at, :address
 
+    alias company_number number
+    alias company_name name
+
     def self.search(name, per_page:, start:)
       options = { q: name, items_per_page: per_page, start_index: start }
 
@@ -24,17 +27,19 @@ module CompaniesHouseHub
 
       result = get(url, params)
 
+      return unless result.success?
+
       new(result.body)
     end
 
     def initialize(json = {})
-      @number = json.fetch(:company_number)
-      @has_been_liquidated = json.fetch(:has_been_liquidated)
-      @jurisdiction = json.fetch(:jurisdiction)
-      @name = json.fetch(:company_name)
-      @created_at = json.fetch(:date_of_creation)
-      @address = Address.new(json.fetch(:registered_office_address))
-      @status = json.fetch(:company_status)
+      @number = json.dig(:company_number)
+      @has_been_liquidated = json.dig(:has_been_liquidated)
+      @jurisdiction = json.dig(:jurisdiction)
+      @name = json.dig(:company_name)
+      @created_at = json.dig(:date_of_creation)
+      @address = Address.new(json.dig(:registered_office_address))
+      @status = json.dig(:company_status)
     end
 
     def filing_histories
