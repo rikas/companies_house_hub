@@ -7,11 +7,11 @@ module CompaniesHouseHub
     attr_reader :address_line_1, :address_line_2, :postal_code, :locality, :country
 
     def initialize(json = {})
-      @address_line1 = json.fetch(:address_line_1)
-      @address_line2 = json.fetch(:address_line_2)
-      @country = json.fetch(:country)
-      @postal_code = json.fetch(:postal_code)
-      @locality = json.fetch(:locality)
+      @address_line1 = json.dig(:address_line_1)
+      @address_line2 = json.dig(:address_line_2)
+      @country = json.dig(:country)
+      @postal_code = json.dig(:postal_code)
+      @locality = json.dig(:locality)
     end
 
     def full
