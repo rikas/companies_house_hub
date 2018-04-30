@@ -21,7 +21,7 @@ module CompaniesHouseHub
       conn.basic_auth(configuration.api_key, '')
       conn.use FaradayMiddleware::ParseJson
       conn.response :json, parser_options: { symbolize_names: true }
-      conn.response :logger
+      conn.response :logger if configuration.debug?
       conn.adapter Faraday.default_adapter
     end
   end
