@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.companieshouse.gov.uk/company/666
+    uri: https://api.companieshouse.gov.uk/company/BR014831/filing-history?items_per_page=100
     body:
       encoding: US-ASCII
       string: ''
@@ -17,15 +17,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Date:
-      - Wed, 02 May 2018 15:11:04 GMT
+      - Wed, 02 May 2018 15:17:36 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '70'
+      - '116'
       Connection:
       - keep-alive
       Access-Control-Allow-Credentials:
@@ -47,16 +47,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600'
       X-Ratelimit-Remain:
-      - '591'
+      - '480'
       X-Ratelimit-Reset:
-      - '1525274014'
+      - '1525274316'
       X-Ratelimit-Window:
       - 5m
       Server:
       - CompaniesHouse
     body:
       encoding: UTF-8
-      string: '{"errors":[{"error":"company-profile-not-found","type":"ch:service"}]}'
+      string: '{"items":[],"items_per_page":100,"filing_history_status":"filing-history-available","start_index":0,"total_count":0}'
     http_version: 
-  recorded_at: Wed, 02 May 2018 15:11:04 GMT
+  recorded_at: Wed, 02 May 2018 15:17:36 GMT
 recorded_with: VCR 4.0.0

@@ -4,7 +4,7 @@ require 'faraday'
 require 'faraday_middleware'
 require 'companies_house_hub/configuration'
 require 'companies_house_hub/base_model'
-
+require 'companies_house_hub/errors'
 require 'companies_house_hub/models/company'
 
 module CompaniesHouseHub

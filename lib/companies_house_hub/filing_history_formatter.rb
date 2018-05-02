@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'yaml'
-
+# 02200605
 module CompaniesHouseHub
   class FilingHistoryFormatter
     def initialize(filing_history)

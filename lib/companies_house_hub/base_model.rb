@@ -1,9 +1,15 @@
 # frozen_string_literal: true
 
+require 'companies_house_hub/errors'
+
 module CompaniesHouseHub
   class BaseModel
     def self.get(path, params)
-      CompaniesHouseHub.connection.get(path, params)
+      result = CompaniesHouseHub.connection.get(path, params)
+
+      raise APIKeyError, result.body[:error] if result.status == 401
+
+      result
     end
 
     def get(path, params)

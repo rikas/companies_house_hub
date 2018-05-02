@@ -21,10 +21,49 @@ RSpec.describe CompaniesHouseHub::Company do
     expect(company.address).to be_an(CompaniesHouseHub::Address)
   end
 
+  describe '#search' do
+    it 'returns a list of companies found' do
+      VCR.use_cassette('search_HOKO') do
+        companies = described_class.search('HOKO')
+
+        expect(companies).to be_an(Array)
+        expect(companies.size).to eq(14)
+        expect(companies.first).to be_an(described_class)
+      end
+    end
+
+    it 'only returns companies with a valid company number' do
+      VCR.use_cassette('search_HOKO', record: :new_episodes) do
+        companies = described_class.search('HOKO')
+
+        raw_response = Net::HTTP.get_response(URI('https://api.companieshouse.gov.uk/search?items_per_page&q=HOKO&start_index'))
+        json_response = JSON.parse(raw_response.body, symbolize_names: true)
+
+        expect(json_response[:items].size).to eq(20)
+        expect(companies.size).to eq(14)
+      end
+    end
+  end
+
   describe '.find' do
     it 'returns nil if the company is not found' do
       VCR.use_cassette('invalid_company') do
         expect(described_class.find('666')).to be_nil
+      end
+    end
+
+    it 'returns an instance of the company if it exists' do
+      VCR.use_cassette('company_find_02200605') do
+        company = described_class.find('02200605')
+
+        expect(company).to be_an(described_class)
+        expect(company.number).to eq('02200605')
+        expect(company.has_been_liquidated).to be_truthy
+        expect(company.jurisdiction).to eq('england-wales')
+        expect(company.name).to eq('JOJO LIMITED')
+        expect(company.date_of_creation).to eq('1987-11-30')
+        expect(company.status).to eq('dissolved')
+        expect(company.type).to eq('ltd')
       end
     end
   end

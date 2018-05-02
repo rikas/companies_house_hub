@@ -22,7 +22,16 @@ module CompaniesHouseHub
 
       result = get(SEARCH_PATH, options)
 
-      result.body[:items].map { |company_json| new(company_json) }
+      return [] unless result.success?
+
+      # Get all items and create a new company. If the company has no number we need to ignore it.
+      companies = result.body[:items].map do |company_json|
+        next unless company_json.dig(:company_number)
+
+        new(company_json)
+      end
+
+      companies.compact
     end
 
     def self.find(company_number, params = {})
@@ -30,7 +39,7 @@ module CompaniesHouseHub
 
       result = get(url, params)
 
-      return unless result.success?
+      return if result.status == 404
 
       new(result.body)
     end

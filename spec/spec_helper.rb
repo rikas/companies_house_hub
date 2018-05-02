@@ -10,6 +10,14 @@ require 'vcr'
 require 'bundler/setup'
 require 'pry-byebug'
 require 'companies_house_hub'
+require 'dotenv'
+
+Dotenv.load
+
+# Configure with your test api key
+CompaniesHouseHub.configure do |config|
+  config.api_key = ENV['API_KEY']
+end
 
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'

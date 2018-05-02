@@ -7,8 +7,11 @@ module CompaniesHouseHub
     DOCUMENT_URL = 'https://beta.companieshouse.gov.uk'
     FIND_PATH = '/company/:company_number/filing-history'
     DEFAULT_PER_PAGE = 100
+    LEGACY_DOC_DESCRIPTION = 'legacy'
 
     attr_reader :description, :action_date, :date, :type, :barcode, :links, :description_values
+
+    alias name description
 
     def self.all(options = {})
       options[:items_per_page] ||= DEFAULT_PER_PAGE
@@ -17,7 +20,17 @@ module CompaniesHouseHub
 
       result = get(format_url(FIND_PATH, company_number: number), options)
 
-      result.body[:items].map { |filing_json| new(filing_json) }
+      return [] unless result.body[:items].any?
+
+      # Get all items and create a new history. If the description is 'legacy' then we can safely
+      # ignore that document.
+      filing_histories = result.body[:items].map do |filing_json|
+        next if filing_json.dig(:description) == LEGACY_DOC_DESCRIPTION
+
+        new(filing_json)
+      end
+
+      filing_histories.compact
     end
 
     def initialize(json = {})

@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.companieshouse.gov.uk/company/02200605/filing-history?items_per_page=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Basic dTRTSFFVZGhLSHFZODVWcTc5TTB6SFhzWGl3cmFYOTJXek9pdUhwcTo=
+      User-Agent:
+      - Faraday v0.15.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 May 2018 15:10:09 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '5856'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - X-RateLimit-Query, origin, content-type, content-length, user-agent, host,
+        accept, authorization
+      Access-Control-Expose-Headers:
+      - Location,www-authenticate,cache-control,pragma,content-type,expires,last-modified
+      - X-RateLimit-Window, X-RateLimit-Limit, X-RateLimit-Remain, X-RateLimit-Reset,
+        Location, www-authenticate, cache-control, pragma, content-type, expires,
+        last-modified
+      Access-Control-Max-Age:
+      - '3600'
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      X-Ratelimit-Limit:
+      - '600'
+      X-Ratelimit-Remain:
+      - '592'
+      X-Ratelimit-Reset:
+      - '1525274014'
+      X-Ratelimit-Window:
+      - 5m
+      Server:
+      - CompaniesHouse
+    body:
+      encoding: UTF-8
+      string: '{"items_per_page":100,"total_count":21,"items":[{"type":"GAZ2","category":"gazette","description":"gazette-dissolved-compulsary","date":"2012-04-10","links":{"document_metadata":"https://document-api.companieshouse.gov.uk/document/P-TFJGbWwtvfVNtFATvdFYsImVE4fKMoFhYzFRnpqQM","self":"/company/02200605/filing-history/MzA1NTIzMzMwMWFkaXF6a2N4"},"pages":1,"paper_filed":true,"barcode":null,"transaction_id":"MzA1NTIzMzMwMWFkaXF6a2N4"},{"type":"GAZ1","date":"2011-12-27","category":"gazette","description":"gazette-notice-compulsary","paper_filed":true,"links":{"document_metadata":"https://document-api.companieshouse.gov.uk/document/axUOSRC7XZc4nM0GBLbRBfqNMK2bs7mMNmEqmoCAmSc","self":"/company/02200605/filing-history/MzA0OTI2MTEzOWFkaXF6a2N4"},"pages":1,"barcode":null,"transaction_id":"MzA0OTI2MTEzOWFkaXF6a2N4"},{"category":"gazette","description":"gazette-filings-brought-up-to-date","date":"1994-07-04","type":"DISS40","barcode":null,"transaction_id":"MDA4NzQ5NjQxNGFkaXF6a2N4"},{"description":"gazette-notice-compulsary","category":"gazette","date":"1993-11-16","type":"GAZ1","barcode":null,"transaction_id":"MDE0MTg0NTM4N2FkaXF6a2N4"},{"category":"accounts","description":"accounts-with-accounts-type-small","description_values":{"made_up_date":"1990-12-31"},"date":"1991-11-13","action_date":"1990-12-31","type":"AA","links":{"document_metadata":"https://document-api.companieshouse.gov.uk/document/GHA4eFJtbTVBKyR_uPrEXz720L1uYHsSCowEv-3h5j8","self":"/company/02200605/filing-history/MDAzNjg1MTgwM2FkaXF6a2N4"},"pages":8,"paper_filed":true,"barcode":null,"transaction_id":"MDAzNjg1MTgwM2FkaXF6a2N4"},{"date":"1991-08-29","category":"annual-return","description_values":{"description":"Return
+        made up to 31/07/91; full list of members"},"description":"legacy","type":"363a","links":{"document_metadata":"https://document-api.companieshouse.gov.uk/document/VoBVYjfRcmNmzi4XeaUU5aG-z8pRLGMirRWt6PFKRhE","self":"/company/02200605/filing-history/MDAyMjQ0OTQ0M2FkaXF6a2N4"},"pages":7,"paper_filed":true,"barcode":null,"transaction_id":"MDAyMjQ0OTQ0M2FkaXF6a2N4"},{"date":"1991-06-19","category":"insolvency","description":"liquidation-administration-order","type":"2.7","subcategory":"administration","barcode":null,"transaction_id":"MDE1NDU1MTQwMGFkaXF6a2N4"},{"description":"liquidation-administration-notice-of-administration-order","category":"insolvency","date":"1991-06-19","subcategory":"administration","type":"2.6","barcode":null,"transaction_id":"MDEwNDI5MjM4MGFkaXF6a2N4"},{"type":"287","description_values":{"description":"Registered
+        office changed on 11/04/91 from: 145 queensway bletchley milton keynes MK42
+        2DU"},"description":"legacy","category":"address","date":"1991-04-11","barcode":null,"transaction_id":"MDA2MTQ2MDk5MGFkaXF6a2N4"},{"type":"395","category":"mortgage","description_values":{"description":"Particulars
+        of mortgage/charge"},"description":"legacy","date":"1991-03-20","barcode":null,"transaction_id":"MDEyMjEyODQ0MGFkaXF6a2N4"},{"category":"accounts","description":"accounts-with-accounts-type-full","description_values":{"made_up_date":"1989-12-31"},"date":"1990-08-13","action_date":"1989-12-31","type":"AA","barcode":null,"transaction_id":"MDA3OTEzNDU0NGFkaXF6a2N4"},{"type":"225(1)","category":"accounts","description_values":{"description":"Accounting
+        reference date shortened from 31/03 to 31/12"},"description":"legacy","date":"1990-08-13","barcode":null,"transaction_id":"MDA5MTQ3OTE2MmFkaXF6a2N4"},{"type":"AA","action_date":"1988-12-31","date":"1990-03-02","category":"accounts","description_values":{"made_up_date":"1988-12-31"},"description":"accounts-with-accounts-type-full","barcode":null,"transaction_id":"MDA4NzA3NDU4NWFkaXF6a2N4"},{"category":"annual-return","description_values":{"description":"Return
+        made up to 25/01/90; full list of members"},"description":"legacy","date":"1990-03-02","type":"363","barcode":null,"transaction_id":"MDExODA5NTgzNmFkaXF6a2N4"},{"date":"1990-03-02","category":"annual-return","description":"legacy","description_values":{"description":"Return
+        made up to 31/05/89; full list of members"},"type":"363","barcode":null,"transaction_id":"MDA1OTc2MTkxNmFkaXF6a2N4"},{"date":"1989-08-22","category":"address","description":"legacy","description_values":{"description":"Registered
+        office changed on 22/08/89 from: 376 silbury court silbury boulevard central
+        milton keynes MK9 2LU"},"type":"287","barcode":null,"transaction_id":"MDA1OTEyODM0M2FkaXF6a2N4"},{"type":"CERTNM","subcategory":"certificate","date":"1988-06-21","category":"change-of-name","description":"certificate-change-of-name-company","description_values":{"description":"Company
+        name changed todays dreams LIMITED\\certificate issued on 22/06/88"},"barcode":null,"transaction_id":"MDEyNTc3Mzk3NWFkaXF6a2N4"},{"type":"288","description":"legacy","description_values":{"description":"Secretary
+        resigned;new secretary appointed;director resigned;new director appointed"},"category":"officers","date":"1988-01-14","barcode":null,"transaction_id":"MDA1NjU3MjQzOWFkaXF6a2N4"},{"type":"287","date":"1988-01-14","description_values":{"description":"Registered
+        office changed on 14/01/88 from: temple house 20 holywell row london EC2A
+        4JB"},"description":"legacy","category":"address","barcode":null,"transaction_id":"MDEzMDIyMzQ3NmFkaXF6a2N4"},{"type":"RESOLUTIONS","date":"1988-01-14","category":"resolution","description":"resolution","resolutions":[{"description":"special-resolution-adopt-memorandum","category":"incorporation","subcategory":"resolution","type":"SRES01"}],"description_values":{"description":"Resolutions"},"barcode":null,"transaction_id":"MDAxNTg0MjM0MmFkaXF6a2N4"},{"type":"NEWINC","date":"1987-11-30","description":"incorporation-company","category":"incorporation","barcode":null,"transaction_id":"MDA5NDk1NDM3OGFkaXF6a2N4"}],"filing_history_status":"filing-history-available","start_index":0}'
+    http_version: 
+  recorded_at: Wed, 02 May 2018 15:10:09 GMT
+recorded_with: VCR 4.0.0
