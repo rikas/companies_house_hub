@@ -1,6 +1,39 @@
 # frozen_string_literal: true
 
 RSpec.describe CompaniesHouseHub::FilingHistory do
+  it 'generates a barcode if it is nil' do
+    params = {
+      description: 'incorporation-company',
+      action_date: '1948-03-10',
+      date: '1980-11-03',
+      type: 'NEWINC',
+      links: {
+        self: '/company/04685029/filing-history/MDExMTcxMjc4MmFkaXF6a2N4'
+      }
+    }
+
+    filing_history = described_class.new(params)
+
+    expect(filing_history.barcode).not_to be_nil
+  end
+
+  it 'uses the barcode from companies house if present' do
+    params = {
+      description: 'incorporation-company',
+      action_date: '1948-03-10',
+      date: '1980-11-03',
+      type: 'NEWINC',
+      links: {
+        self: '/company/04685029/filing-history/MDExMTcxMjc4MmFkaXF6a2N4'
+      },
+      barcode: 'B4RC0D3'
+    }
+
+    filing_history = described_class.new(params)
+
+    expect(filing_history.barcode).to eq('B4RC0D3')
+  end
+
   describe '.all' do
     it 'returns an array of FilingHistory objects' do
       VCR.use_cassette('filing_histories_for_02200605') do

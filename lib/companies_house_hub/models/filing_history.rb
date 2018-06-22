@@ -38,8 +38,9 @@ module CompaniesHouseHub
       @action_date = json.dig(:action_date)
       @date = json.dig(:date)
       @type = json.dig(:type)
-      @barcode = json.dig(:barcode)
       @links = json.dig(:links)
+      @transaction_id = json.dig(:transaction_id) # helps on barcode generation
+      @barcode = json.dig(:barcode) || generate_barcode
       @description_values = json.dig(:description_values)
     end
 
@@ -53,6 +54,17 @@ module CompaniesHouseHub
       document_path = "#{file_path}/document?format=#{format}"
 
       URI.join(DOCUMENT_URL, document_path).to_s
+    end
+
+    private
+
+    # Sometimes the barcode comes as nil for some reason so we generate one based on the url. If the
+    # URL is also not defined then we hope for the best and use other variables.
+    def generate_barcode
+      string = @links[:self] if @links
+      string ||= [@description, @type, @transaction_id].compact.join
+
+      Digest::SHA1.hexdigest(string)[0..6].upcase
     end
   end
 end
