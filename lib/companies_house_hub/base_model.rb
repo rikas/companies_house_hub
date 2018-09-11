@@ -13,11 +13,11 @@ module CompaniesHouseHub
     end
 
     def get(path, params)
-      self.class.get(path, params)
+      self.class.get(path.strip, params)
     end
 
     def self.format_url(url, params)
-      formatted = url.dup
+      formatted = url.dup.strip
 
       params.each { |key, value| formatted.sub!(":#{key}", value) }
 

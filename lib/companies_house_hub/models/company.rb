@@ -35,7 +35,7 @@ module CompaniesHouseHub
     end
 
     def self.find(company_number, params = {})
-      url = format_url(FIND_PATH, company_number: company_number.to_s)
+      url = format_url(FIND_PATH, company_number: company_number.to_s.strip)
 
       result = get(url, params)
 
