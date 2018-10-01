@@ -50,7 +50,7 @@ module CompaniesHouseHub
       @jurisdiction = json.dig(:jurisdiction)
       @name = json.dig(:company_name) || json.dig(:title)
       @created_at = json.dig(:date_of_creation)
-      @address = Address.new(json.dig(:registered_office_address) || json.dig(:address))
+      @address = Address.new(json.dig(:registered_office_address) || json.dig(:address) || {})
       @status = json.dig(:company_status)
       @type = json.dig(:type) || json.dig(:company_type)
       @accounts = json.dig(:accounts)
