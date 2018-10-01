@@ -54,7 +54,7 @@ module CompaniesHouseHub
       @status = json.dig(:company_status)
       @type = json.dig(:type) || json.dig(:company_type)
       @accounts = json.dig(:accounts)
-      @full_address = json.dig(:address_snippet) || @address.full
+      @full_address = json.fetch(:address_snippet, @address.full)
     end
 
     def filing_histories
