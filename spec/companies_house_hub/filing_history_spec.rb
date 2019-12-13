@@ -34,6 +34,63 @@ RSpec.describe CompaniesHouseHub::FilingHistory do
     expect(filing_history.barcode).to eq('B4RC0D3')
   end
 
+  describe '#url' do
+    describe 'when links[:self] missing' do
+      let(:params) do
+        {
+          category: 'incorporation',
+          type: 'NEWINC',
+          description: 'incorporation-company',
+          date: '2013-08-13',
+          links: {
+            document_metadata: 'https://frontend-doc-api.companieshouse.gov.uk/document/8hxefY-BlkpaS8T75tCdh3c-HPifDApSSlSrWgvAJSw'
+          },
+          barcode: 'X2EMX0AQ',
+          transaction_id: 'MzA4MzExOTM4NWFkaXF6a2N4'
+        }
+      end
+
+      it 'builds url from company_number and transaction_id when company number is present' do
+        filing_history = described_class.new(params, '08647669')
+
+        expect(filing_history.url).to eq('https://beta.companieshouse.gov.uk/company/08647669/filing-history/MzA4MzExOTM4NWFkaXF6a2N4/document?format=pdf')
+      end
+
+      it 'is nullified when company_number is missing' do
+        filing_history = described_class.new(params)
+
+        expect(filing_history.url).to be_nil
+      end
+    end
+
+    describe 'when links[:self] present' do
+      let(:params) do
+        {
+          description: 'mortgage-create-with-deed-with-charge-number-charge-creation-date',
+          action_date: '2019-05-29',
+          category: 'mortgage',
+          date: '2019-06-05',
+          links: {
+            self: '/company/08647669/filing-history/MzIzNjQ5MjYyMGFkaXF6a2N4',
+            document_metadata: 'https://frontend-doc-api.companieshouse.gov.uk/document/4zXiVoo9uXwp2lvAdPpSszD2NwPjR0dKBEmyCJb8gr8'
+          },
+          subcategory: 'create',
+          type: 'MR01',
+          paper_filed: true,
+          pages: 6,
+          barcode: 'A86Y3WRN',
+          transaction_id: 'MzIzNjQ5MjYyMGFkaXF6a2N4'
+        }
+      end
+
+      it 'builds url from provided link' do
+        filing_history = described_class.new(params)
+
+        expect(filing_history.url).to eq('https://beta.companieshouse.gov.uk/company/08647669/filing-history/MzIzNjQ5MjYyMGFkaXF6a2N4/document?format=pdf')
+      end
+    end
+  end
+
   describe '.all' do
     it 'returns an array of FilingHistory objects' do
       VCR.use_cassette('filing_histories_for_02200605') do

@@ -16,9 +16,9 @@ module CompaniesHouseHub
     def self.all(options = {})
       options[:items_per_page] ||= DEFAULT_PER_PAGE
 
-      number = options.delete(:company_number)
+      company_number = options.delete(:company_number)
 
-      result = get(format_url(FIND_PATH, company_number: number), options)
+      result = get(format_url(FIND_PATH, company_number: company_number), options)
 
       return [] unless result.body[:items].any?
 
@@ -27,13 +27,13 @@ module CompaniesHouseHub
       filing_histories = result.body[:items].map do |filing_json|
         next if filing_json.dig(:description) == LEGACY_DOC_DESCRIPTION
 
-        new(filing_json)
+        new(filing_json, company_number)
       end
 
       filing_histories.compact
     end
 
-    def initialize(json = {})
+    def initialize(json = {}, company_number = nil)
       @description = json.dig(:description)
       @action_date = json.dig(:action_date)
       @date = json.dig(:date)
@@ -42,6 +42,7 @@ module CompaniesHouseHub
       @transaction_id = json.dig(:transaction_id) # helps on barcode generation
       @barcode = json.dig(:barcode) || generate_barcode
       @description_values = json.dig(:description_values)
+      @company_number = company_number
     end
 
     def formatted_name
@@ -49,7 +50,9 @@ module CompaniesHouseHub
     end
 
     def url(format = 'pdf')
-      file_path = @links[:self]
+      file_path = @links[:self] || build_file_path
+
+      return unless file_path
 
       document_path = "#{file_path}/document?format=#{format}"
 
@@ -65,6 +68,12 @@ module CompaniesHouseHub
       string ||= [@description, @type, @transaction_id].compact.join
 
       Digest::SHA1.hexdigest(string)[0..6].upcase
+    end
+
+    def build_file_path
+      required = [@company_number, @transaction_id].all? { |val| val && !val.empty? }
+
+      "/company/#{@company_number}/filing-history/#{@transaction_id}" if required
     end
   end
 end
