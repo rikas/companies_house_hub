@@ -1,8 +1,5 @@
 require: rubocop-rspec
 
-Metrics/AbcSize:
-  Max: 30
-
 Style/Documentation:
   Enabled: false
 
@@ -30,10 +27,6 @@ Lint/UselessAssignment:
 
 RSpec/ExampleLength:
   Max: 100
-
-# To be compatible with older versions of ruby
-Performance/RegexpMatch:
-  Enabled: false
 
 RSpec/MultipleExpectations:
   Enabled: false
