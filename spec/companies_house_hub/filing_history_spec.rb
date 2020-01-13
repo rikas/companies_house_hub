@@ -88,6 +88,14 @@ RSpec.describe CompaniesHouseHub::FilingHistory do
 
         expect(filing_history.url).to eq('https://beta.companieshouse.gov.uk/company/08647669/filing-history/MzIzNjQ5MjYyMGFkaXF6a2N4/document?format=pdf')
       end
+
+      it 'is nullified when links[:document_metadata] is missing' do
+        filing_history = described_class.new(
+          params.merge(links: { self: '/company/08647669/filing-history/MzIzNjQ5MjYyMGFkaXF6a2N4' })
+        )
+
+        expect(filing_history.url).to be_nil
+      end
     end
   end
 

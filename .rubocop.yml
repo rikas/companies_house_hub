@@ -6,7 +6,7 @@ Style/Documentation:
 Style/MixinUsage:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
 
 Metrics/MethodLength:
