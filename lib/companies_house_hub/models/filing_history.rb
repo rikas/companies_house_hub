@@ -50,6 +50,8 @@ module CompaniesHouseHub
     end
 
     def url(format = 'pdf')
+      return unless @links[:document_metadata]
+
       file_path = @links[:self] || build_file_path
 
       return unless file_path
