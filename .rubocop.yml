@@ -3,9 +3,6 @@ require: rubocop-rspec
 Style/Documentation:
   Enabled: false
 
-Style/MixinUsage:
-  Enabled: false
-
 Layout/LineLength:
   Max: 100
 

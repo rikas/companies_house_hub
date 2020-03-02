@@ -10,7 +10,7 @@ module CompaniesHouseHub
     FIND_PATH = '/company/:company_number'
 
     attr_reader :number, :name, :created_at, :address, :type, :jurisdiction, :has_been_liquidated
-    attr_reader :status, :accounts, :full_address
+    attr_reader :status, :accounts, :confirmation_statement, :full_address
 
     alias company_number number
     alias company_name name
@@ -54,6 +54,7 @@ module CompaniesHouseHub
       @status = json.dig(:company_status)
       @type = json.dig(:type) || json.dig(:company_type)
       @accounts = json.dig(:accounts)
+      @confirmation_statement = json.dig(:confirmation_statement)
       @full_address = json.fetch(:address_snippet, @address.full)
     end
 

@@ -17,7 +17,7 @@ CompaniesHouseHub.configure do |config|
 end
 
 # Allow direct access to CompaniesHouseHub classes
-include CompaniesHouseHub
+send(:include, CompaniesHouseHub)
 
 require 'pry'
 Pry.start
