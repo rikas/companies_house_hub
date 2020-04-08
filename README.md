@@ -23,7 +23,7 @@ Set up CompaniesHouseHub in a block:
 
 ```ruby
 CompaniesHouseHub.configure do |config|
-  config.api_token = <YOUR_TOKEN>
+  config.api_key = <YOUR_TOKEN>
 end
 ```
 
