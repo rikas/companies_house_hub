@@ -10,7 +10,7 @@ module CompaniesHouseHub
     FIND_PATH = '/company/:company_number'
 
     attr_reader :number, :name, :created_at, :address, :type, :jurisdiction, :has_been_liquidated
-    attr_reader :status, :accounts, :confirmation_statement, :full_address
+    attr_reader :status, :accounts, :confirmation_statement, :full_address, :raw_json
 
     alias company_number number
     alias company_name name
@@ -45,6 +45,7 @@ module CompaniesHouseHub
     end
 
     def initialize(json = {})
+      @raw_json = json
       @number = json.dig(:company_number)
       @has_been_liquidated = json.dig(:has_been_liquidated)
       @jurisdiction = json.dig(:jurisdiction)
