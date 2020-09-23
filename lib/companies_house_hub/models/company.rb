@@ -3,6 +3,7 @@
 require 'companies_house_hub/base_model'
 require 'companies_house_hub/models/address'
 require 'companies_house_hub/models/filing_history'
+require 'companies_house_hub/models/person'
 
 module CompaniesHouseHub
   class Company < BaseModel
@@ -61,6 +62,10 @@ module CompaniesHouseHub
 
     def filing_histories
       FilingHistory.all(company_number: @number)
+    end
+
+    def persons
+      Person.all(company_number: @number)
     end
 
     def active?
