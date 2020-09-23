@@ -18,6 +18,7 @@ module CompaniesHouseHub
     alias company_name name
     alias date_of_creation created_at
     alias company_status status
+    alias type company_type
 
     def self.search(name, per_page: nil, start: nil)
       options = { q: name, items_per_page: per_page, start_index: start }
