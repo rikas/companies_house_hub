@@ -5,7 +5,7 @@ module CompaniesHouseHub
     FIND_PATH = "/company/:company_number/persons-with-significant-control"
     DEFAULT_PER_PAGE = 90
 
-    attr_reader :name, :nationality, :kind, :country_of_residence, :forename, :middle_name, :title
+    attr_reader :name, :nationality, :country_of_residence, :forename, :middle_name, :title
     attr_reader :surname, :address, :raw_json
 
     def self.all(options = {})
