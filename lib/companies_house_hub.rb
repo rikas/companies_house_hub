@@ -6,6 +6,8 @@ require 'companies_house_hub/configuration'
 require 'companies_house_hub/base_model'
 require 'companies_house_hub/errors'
 require 'companies_house_hub/models/company'
+require 'companies_house_hub/models/person'
+require 'companies_house_hub/models/officer'
 
 module CompaniesHouseHub
   API_URL = 'https://api.companieshouse.gov.uk'
