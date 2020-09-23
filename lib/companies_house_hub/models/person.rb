@@ -15,11 +15,20 @@ module CompaniesHouseHub
 
       result = get(format_url(FIND_PATH, company_number: company_number), options)
 
-      return [] unless result.body[:items].any?
+      # For some companies, for some reason, this endpoint returns an error, like this:
+      # {
+      #   "errors": [
+      #     {
+      #       "error": "company-psc-not-found",
+      #       "type": "ch:service"
+      #     }
+      #   ]
+      # }
+      items = result.body.dig(:items) || []
 
-      result.body[:items].map do |person_json|
-        new(person_json)
-      end
+      return [] unless items.any?
+
+      items.map { |person_json| new(person_json) }
     end
 
     def initialize(json = {})

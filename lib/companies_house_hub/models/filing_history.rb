@@ -20,11 +20,13 @@ module CompaniesHouseHub
 
       result = get(format_url(FIND_PATH, company_number: company_number), options)
 
-      return [] unless result.body[:items].any?
+      items = result.body.dig(:items) || []
+
+      return [] unless items.any?
 
       # Get all items and create a new history. If the description is 'legacy' then we can safely
       # ignore that document.
-      filing_histories = result.body[:items].map do |filing_json|
+      filing_histories = items.map do |filing_json|
         next if filing_json.dig(:description) == LEGACY_DOC_DESCRIPTION
 
         new(filing_json, company_number)
