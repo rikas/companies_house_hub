@@ -108,13 +108,26 @@ RSpec.describe CompaniesHouseHub::FilingHistory do
       end
     end
 
+    it 'can run formatter on all documents' do
+      VCR.use_cassette('filing_histories_for_09732193') do
+        docs = described_class.all(company_number: '09732193')
+
+        docs.each do |doc|
+          formatter = CompaniesHouseHub::FilingHistoryFormatter.new(doc)
+          formatter.formatted
+        end
+
+        expect(docs.map(&:class).uniq).to eq([described_class])
+      end
+    end
+
     it 'returns the full list of histories if we also accept `legacy` docs' do
       stub_const('CompaniesHouseHub::FilingHistory::LEGACY_DOC_DESCRIPTION', 'bogus-description')
 
       VCR.use_cassette('filing_histories_for_02200605') do
         docs = described_class.all(company_number: '02200605')
 
-        expect(docs.size).to eq(21)
+        expect(docs.size).to eq(22)
       end
     end
 
@@ -122,7 +135,7 @@ RSpec.describe CompaniesHouseHub::FilingHistory do
       VCR.use_cassette('filing_histories_for_02200605') do
         docs = described_class.all(company_number: '02200605')
 
-        expect(docs.size).to eq(12)
+        expect(docs.size).to eq(13)
       end
     end
 

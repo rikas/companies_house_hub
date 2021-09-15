@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - Basic dTRTSFFVZGhLSHFZODVWcTc5TTB6SFhzWGl3cmFYOTJXek9pdUhwcTo=
       User-Agent:
-      - Faraday v0.15.0
+      - Faraday v0.17.3
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 02 May 2018 15:24:35 GMT
+      - Wed, 15 Sep 2021 08:29:50 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '1082'
+      - '1014'
       Connection:
       - keep-alive
       Access-Control-Allow-Credentials:
@@ -47,19 +47,19 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600'
       X-Ratelimit-Remain:
-      - '599'
+      - '596'
       X-Ratelimit-Reset:
-      - '1525274975'
+      - '1631694889'
       X-Ratelimit-Window:
       - 5m
       Server:
       - CompaniesHouse
     body:
       encoding: UTF-8
-      string: '{"type":"ltd","sic_codes":["1823"],"annual_return":{"last_made_up_to":"1991-07-31"},"company_number":"02200605","last_full_members_list_date":"1991-07-31","accounts":{"last_accounts":{"made_up_to":"1990-12-31","type":"small"},"accounting_reference_date":{"month":"12","day":"31"}},"status":"dissolved","has_been_liquidated":true,"undeliverable_registered_office_address":false,"company_name":"JOJO
-        LIMITED","registered_office_address":{"address_line_2":"Luton","address_line_1":"8
-        Cardiff Road","locality":"Beds."},"date_of_creation":"1987-11-30","jurisdiction":"england-wales","has_insolvency_history":true,"etag":"27782ea1049df95866d826889df421ae21b16634","has_charges":true,"company_status":"dissolved","previous_company_names":[{"ceased_on":"1988-06-22","effective_from":"1987-11-30","name":"TODAYS
-        DREAMS LIMITED"}],"links":{"self":"/company/02200605","filing_history":"/company/02200605/filing-history","officers":"/company/02200605/officers","charges":"/company/02200605/charges","insolvency":"/company/02200605/insolvency"},"date_of_cessation":"2012-04-10","can_file":false}'
-    http_version: 
-  recorded_at: Wed, 02 May 2018 15:24:35 GMT
-recorded_with: VCR 4.0.0
+      string: '{"accounts":{"accounting_reference_date":{"day":"31","month":"12"},"last_accounts":{"period_end_on":"1990-12-31","type":"small","made_up_to":"1990-12-31"}},"company_name":"JOJO
+        LIMITED","company_number":"02200605","company_status":"dissolved","date_of_creation":"1987-11-30","etag":"08d60890a9628e36e547ddf6295db49f952ccb42","has_charges":true,"has_insolvency_history":true,"jurisdiction":"england-wales","last_full_members_list_date":"1991-07-31","links":{"self":"/company/02200605","filing_history":"/company/02200605/filing-history","officers":"/company/02200605/officers","insolvency":"/company/02200605/insolvency","charges":"/company/02200605/charges"},"previous_company_names":[{"ceased_on":"1988-06-22","effective_from":"1987-11-30","name":"TODAYS
+        DREAMS LIMITED"}],"registered_office_address":{"locality":"Beds.","address_line_1":"8
+        Cardiff Road","address_line_2":"Luton"},"sic_codes":["1823"],"type":"ltd","undeliverable_registered_office_address":false,"date_of_cessation":"2012-04-10","can_file":false}'
+    http_version:
+  recorded_at: Wed, 15 Sep 2021 08:29:50 GMT
+recorded_with: VCR 5.0.0

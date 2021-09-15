@@ -52,6 +52,10 @@ version, update the version number in `version.rb`, and then run `bundle exec ra
 will create a git tag for the version, push git commits and tags, and push the `.gem` file
 to [rubygems.org](https://rubygems.org).
 
+### Enumerations
+
+Check https://github.com/companieshouse/api-enumerations for the different data needed.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/rikas/companies_house_hub.

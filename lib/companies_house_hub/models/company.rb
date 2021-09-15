@@ -18,7 +18,6 @@ module CompaniesHouseHub
     alias company_name name
     alias date_of_creation created_at
     alias company_status status
-    alias type company_type
 
     def self.search(name, per_page: nil, start: nil)
       options = { q: name, items_per_page: per_page, start_index: start }
@@ -50,7 +49,7 @@ module CompaniesHouseHub
     def initialize(json = {})
       @raw_json = json
       @number = json.dig(:company_number)
-      @has_been_liquidated = json.dig(:has_been_liquidated)
+      @has_been_liquidated = json.dig(:has_been_liquidated) || false
       @jurisdiction = json.dig(:jurisdiction)
       @name = json.dig(:company_name) || json.dig(:title)
       @created_at = json.dig(:date_of_creation)

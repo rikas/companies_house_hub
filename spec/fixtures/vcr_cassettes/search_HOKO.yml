@@ -10,7 +10,7 @@ http_interactions:
       Authorization:
       - Basic dTRTSFFVZGhLSHFZODVWcTc5TTB6SFhzWGl3cmFYOTJXek9pdUhwcTo=
       User-Agent:
-      - Faraday v0.15.0
+      - Faraday v0.17.3
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 02 May 2018 11:35:07 GMT
+      - Wed, 15 Sep 2021 08:29:50 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '11286'
+      - '11921'
       Connection:
       - keep-alive
       Access-Control-Allow-Credentials:
@@ -47,103 +47,106 @@ http_interactions:
       X-Ratelimit-Limit:
       - '600'
       X-Ratelimit-Remain:
-      - '595'
+      - '597'
       X-Ratelimit-Reset:
-      - '1525261021'
+      - '1631694889'
       X-Ratelimit-Window:
       - 5m
       Server:
       - CompaniesHouse
     body:
       encoding: UTF-8
-      string: '{"kind":"search#all","items_per_page":20,"page_number":1,"start_index":0,"items":[{"address_snippet":"JAG
-        SHAW BAKER, Berners House, 47-48 Berners Street, London, W1T 3NF","kind":"searchresults#company","description":"09525857
-        - Incorporated on  2 April 2015","description_identifier":["incorporated-on"],"matches":{"snippet":[],"title":[1,4]},"company_status":"active","company_number":"09525857","company_type":"ltd","title":"HOKO
-        LTD","links":{"self":"/company/09525857"},"date_of_creation":"2015-04-02","address":{"care_of_name":"JAG
-        SHAW BAKER","address_line_1":"47-48 Berners Street","postal_code":"W1T 3NF","locality":"London","premises":"Berners
-        House"},"snippet":""},{"company_type":"ltd","title":"HOKO AGENCY LIMITED","company_status":"active","company_number":"10659513","description_identifier":["incorporated-on"],"matches":{"snippet":[],"title":[1,4]},"description":"10659513
-        - Incorporated on  8 March 2017","address_snippet":"17 Southland Road, Leicester,
-        England, LE2 3RJ","kind":"searchresults#company","snippet":"","address":{"country":"England","premises":"17","postal_code":"LE2
-        3RJ","locality":"Leicester","address_line_1":"Southland Road"},"date_of_creation":"2017-03-08","links":{"self":"/company/10659513"}},{"description_identifier":["incorporated-on"],"description":"SC531509
-        - Incorporated on  4 April 2016","matches":{"snippet":[],"title":[1,4]},"address_snippet":"100
-        Main Street, Lower Largo, Leven, Fife, Scotland, KY8 6BP","kind":"searchresults#company","company_type":"ltd","title":"HOKO
-        DESIGN LTD","company_status":"active","company_number":"SC531509","address":{"country":"Scotland","region":"Fife","address_line_2":"Lower
-        Largo","address_line_1":"Main Street","premises":"100","postal_code":"KY8
-        6BP","locality":"Leven"},"date_of_creation":"2016-04-04","links":{"self":"/company/SC531509"},"snippet":""},{"company_type":"ltd","title":"HOKODO
-        LTD","company_status":"active","company_number":"11215527","description_identifier":["incorporated-on"],"description":"11215527
-        - Incorporated on 20 February 2018","matches":{"title":[1,6],"snippet":[]},"address_snippet":"20-22
-        Wenlock Road, London, England, N1 7GU","kind":"searchresults#company","snippet":"","address":{"country":"England","address_line_1":"Wenlock
-        Road","locality":"London","postal_code":"N1 7GU","premises":"20-22"},"date_of_creation":"2018-02-20","links":{"self":"/company/11215527"}},{"company_type":"ltd","title":"HOKO
-        HOLDINGS LIMITED","company_status":"active","company_number":"04327690","description_identifier":["incorporated-on"],"description":"04327690
-        - Incorporated on 23 November 2001","matches":{"snippet":[],"title":[1,4]},"address_snippet":"Unit
-        1 Farrington Place, Rossendale Road Ind Est, Burnley, Lancashire, BB11 5TY","kind":"searchresults#company","snippet":"","date_of_creation":"2001-11-23","address":{"postal_code":"BB11
-        5TY","premises":"Unit 1","locality":"Burnley","address_line_1":"Farrington
-        Place","address_line_2":"Rossendale Road Ind Est","region":"Lancashire"},"links":{"self":"/company/04327690"}},{"address_snippet":"8  Little
-        Bornes, London, England, SE21 8SE","kind":"searchresults#company","description":"08385146
-        - Incorporated on  1 February 2013","description_identifier":["incorporated-on"],"matches":{"title":[1,6],"snippet":[]},"company_status":"active","company_number":"08385146","company_type":"ltd","title":"HOKOLO
-        LTD.","links":{"self":"/company/08385146"},"date_of_creation":"2013-02-01","address":{"address_line_1":"Little
-        Bornes","premises":"8 ","postal_code":"SE21 8SE","locality":"London","country":"England"},"snippet":""},{"company_number":"08519126","company_status":"active","title":"HOKONUI
-        CONSULTANCY LIMITED","company_type":"ltd","kind":"searchresults#company","address_snippet":"2
-        Stamford Square, London, SW15 2BF","description_identifier":["incorporated-on"],"description":"08519126
-        - Incorporated on  7 May 2013","matches":{"title":[1,7],"snippet":[]},"snippet":"","links":{"self":"/company/08519126"},"address":{"address_line_1":"Stamford
-        Square","premises":"2","postal_code":"SW15 2BF","locality":"London"},"date_of_creation":"2013-05-07"},{"title":"HOKORI
-        LIMITED","company_type":"ltd","company_number":"10146954","company_status":"active","matches":{"snippet":[],"title":[1,6]},"description_identifier":["incorporated-on"],"description":"10146954
-        - Incorporated on 26 April 2016","kind":"searchresults#company","address_snippet":"20  St
-        John''s Wood Terrace, London, United Kingdom, NW8 6JL","snippet":"","address":{"address_line_1":"St
-        John''s Wood Terrace","premises":"20 ","locality":"London","postal_code":"NW8
-        6JL","country":"United Kingdom"},"date_of_creation":"2016-04-26","links":{"self":"/company/10146954"}},{"snippet":"","links":{"self":"/company/06092650"},"date_of_creation":"2007-02-09","address":{"address_line_1":"Westminster
-        Bridge Road","postal_code":"SE1 7HR","premises":"123 ","locality":"London","country":"United
-        Kingdom"},"company_status":"dissolved","company_number":"06092650","company_type":"ltd","date_of_cessation":"2014-01-21","title":"HOKOL
-        LIMITED","address_snippet":"123  Westminster Bridge Road, London, United Kingdom,
-        SE1 7HR","kind":"searchresults#company","description":"06092650 - Dissolved
-        on 21 January 2014","description_identifier":["dissolved-on"],"matches":{"snippet":[],"title":[1,5]}},{"snippet":"","links":{"self":"/company/07611513"},"address":{"country":"England","locality":"London","premises":"280
-        ","postal_code":"W6 0SP","address_line_1":"King Street"},"date_of_creation":"2011-04-21","company_number":"07611513","company_status":"dissolved","date_of_cessation":"2013-12-03","title":"HOKO
-        GRP LTD","company_type":"ltd","kind":"searchresults#company","address_snippet":"280  King
-        Street, London, England, W6 0SP","description_identifier":["dissolved-on"],"description":"07611513
-        - Dissolved on  3 December 2013","matches":{"title":[1,4],"snippet":[]}},{"company_status":"active","company_number":"07911734","company_type":"ltd","title":"H
-        R HOKO LIMITED","address_snippet":"5  Castle Street, Bridgwater, Somerset,
-        TA6 3DD","kind":"searchresults#company","description":"07911734 - Incorporated
-        on 16 January 2012","description_identifier":["incorporated-on"],"matches":{"title":[5,8],"snippet":[]},"snippet":"","links":{"self":"/company/07911734"},"address":{"address_line_1":"Castle
-        Street","premises":"5 ","postal_code":"TA6 3DD","locality":"Bridgwater","region":"Somerset"},"date_of_creation":"2012-01-16"},{"address":{"country":"United
-        Kingdom","premises":"Ground Floor 28 Station Road","locality":"Warminster","postal_code":"BA12
-        9BR","address_line_1":"Wiltshire"},"date_of_creation":"2016-12-01","links":{"self":"/company/10507417"},"description_identifier":["incorporated-on"],"description":"10507417
-        - Incorporated on  1 December 2016","kind":"searchresults#company","address_snippet":"Ground
-        Floor 28 Station Road Wiltshire, Warminster, United Kingdom, BA12 9BR","title":"H
-        OKOLIE 7448 LTD","company_type":"ltd","company_number":"10507417","company_status":"active"},{"description_identifier":["incorporated-on"],"description":"08063081
-        - Incorporated on  9 May 2012","address_snippet":"2 Poolway Place, Coleford,
-        England, GL16 8DF","kind":"searchresults#company","company_type":"ltd","title":"HO
-        KOON LIMITED","company_status":"active","company_number":"08063081","address":{"address_line_1":"Poolway
-        Place","locality":"Coleford","postal_code":"GL16 8DF","premises":"2","country":"England"},"date_of_creation":"2012-05-09","links":{"self":"/company/08063081"}},{"matches":{"title":[9,14],"snippet":[]},"description_identifier":["dissolved-on"],"description":"09239098
-        - Dissolved on 29 March 2016","address_snippet":"18  Third Avenue, Leeds,
-        England, LS12 1LA","kind":"searchresults#company","company_type":"ltd","title":"MUHINDO
-        HOKOKO TRANSPORT LIMITED","date_of_cessation":"2016-03-29","company_status":"dissolved","company_number":"09239098","address":{"country":"England","premises":"18
-        ","locality":"Leeds","postal_code":"LS12 1LA","address_line_1":"Third Avenue"},"date_of_creation":"2014-09-29","links":{"self":"/company/09239098"},"snippet":""},{"title":"Bert
-        HOKOJOKU","kind":"searchresults#officer","address_snippet":"78 Cort Van Der
-        Lindenlaan, Ca Naarden, Netherlands, 1412","description_identifiers":["appointment-count","born-on"],"description":"Total
-        number of appointments 1 - Born February 1973","appointment_count":1,"date_of_birth":{"month":2,"year":1973},"links":{"self":"/officers/nvp07URMn3jm8HFmmzpdpVy1htQ/appointments"},"address":{"country":"1412","address_line_1":"Cort
-        Van Der Lindenlaan","locality":"Ca Naarden","premises":"78"}},{"title":"Atia
-        HOKOKO","description_identifiers":["appointment-count","born-on"],"description":"Total
-        number of appointments 1 - Born June 1985","address_snippet":"20 Bob Massey
-        Close, Manchester, United Kingdom, M11 2JA","kind":"searchresults#officer","date_of_birth":{"month":6,"year":1985},"appointment_count":1,"address":{"address_line_1":"Bob
-        Massey Close","locality":"Manchester","premises":"20","country":"M11 2JA"},"links":{"self":"/officers/kYbSS-OefvPEmtDk5Q4nGt7m42U/appointments"}},{"links":{"self":"/officers/EZsnsosWCrngUghmbPt_f26EjlI/appointments"},"address":{"country":"YO8
-        6EL","premises":"Suite 8, Room 2, Brackenholme Business Park","locality":"Selby","address_line_1":"Brackenholme"},"appointment_count":0,"date_of_birth":{"month":4,"year":1976},"kind":"searchresults#officer","address_snippet":"Suite
-        8, Room 2, Brackenholme Business Park Brackenholme, Selby, England, YO8 6EL","description_identifiers":["appointment-count","born-on"],"description":"Total
-        number of appointments 0 - Born April 1976","title":"Muhindo HOKOKO"},{"description":"Total
-        number of appointments 1 - Born May 1989","description_identifiers":["appointment-count","born-on"],"kind":"searchresults#officer","address_snippet":"152
-        Blackley New Road, Manchester, Lancashire, United Kingdom, M9 8EG","title":"Tresor
-        HOKOKO","address":{"country":"M9 8EG","region":"Lancashire","locality":"Manchester","premises":"152","address_line_1":"Blackley
-        New Road"},"links":{"self":"/officers/Aqjp0kxmTtgoBZCaNOD4H5hiqtQ/appointments"},"date_of_birth":{"month":5,"year":1989},"appointment_count":1},{"address":{"locality":"London","premises":"Flat
-        30","address_line_1":"Ducketts Apartments","country":"E3 2NA","address_line_2":"1
-        Wick Lane Bow","region":"Tower Hamlets"},"links":{"self":"/officers/NtU9HNvWjnwkVnR7TMkT0n0ZR_c/appointments"},"date_of_birth":{"year":1968,"month":11},"appointment_count":0,"description_identifiers":["appointment-count","born-on"],"description":"Total
-        number of appointments 0 - Born November 1968","kind":"searchresults#officer","address_snippet":"Flat
-        30 Ducketts Apartments, 1 Wick Lane Bow, London, Tower Hamlets, United Kingdom,
-        E3 2NA","title":"Memory HOKONYA"},{"title":"Nothando HOKONYA","description":"Total
-        number of appointments 1","description_identifiers":["appointment-count"],"kind":"searchresults#officer","address_snippet":"78
-        Littlefield Road, Stopsley, Luton, Bedfordshire, United Kingdom, LU2 9BU","appointment_count":1,"address":{"country":"LU2
-        9BU","region":"Bedfordshire","address_line_2":"Stopsley","address_line_1":"Littlefield
-        Road","premises":"78","locality":"Luton"},"links":{"self":"/officers/0oP8BKI6j_N4yw--1MYOxL2dZvU/appointments"}}],"total_results":28}'
-    http_version: 
-  recorded_at: Wed, 02 May 2018 11:35:07 GMT
+      string: '{"items":[{"description":"13233612 - Incorporated on 27 February 2021","date_of_creation":"2021-02-27","company_status":"active","company_number":"13233612","kind":"searchresults#company","address":{"locality":"Birmingham","country":"United
+        Kingdom","premises":"Office 610","address_line_1":"One Victoria Square","postal_code":"B1
+        1BD","region":"West Midlands"},"address_snippet":"Office 610 One Victoria
+        Square, Birmingham, West Midlands, United Kingdom, B1 1BD","links":{"self":"/company/13233612"},"description_identifier":["incorporated-on"],"snippet":"","title":"HOKO
+        LIMITED","company_type":"ltd","matches":{"title":[1,4],"snippet":[]}},{"title":"HOKO
+        LTD","snippet":"","description_identifier":["dissolved-on"],"links":{"self":"/company/09525857"},"matches":{"snippet":[],"title":[1,4]},"company_type":"ltd","company_number":"09525857","company_status":"dissolved","date_of_creation":"2015-04-02","date_of_cessation":"2020-01-21","description":"09525857
+        - Dissolved on 21 January 2020","address_snippet":"Berners House, 47-48 Berners
+        Street, London, W1T 3NF","address":{"address_line_1":"47-48 Berners Street","premises":"Berners
+        House","locality":"London","postal_code":"W1T 3NF"},"kind":"searchresults#company"},{"snippet":"","description_identifier":["dissolved-on"],"links":{"self":"/company/04951022"},"title":"HOKO
+        LIMITED","company_type":"ltd","matches":{"title":[1,4],"snippet":[]},"description":"04951022
+        - Dissolved on  1 February 2011","company_status":"dissolved","company_number":"04951022","date_of_creation":"2003-11-03","date_of_cessation":"2011-02-01","kind":"searchresults#company","address":{"postal_code":"NR21
+        9AF","address_line_2":"Fakenham","premises":"11 ","address_line_1":"Norwich
+        Street"},"address_snippet":"11  Norwich Street, Fakenham, NR21 9AF"},{"address_snippet":"100
+        Main Street, Lower Largo, Leven, Scotland, KY8 6BP","address":{"postal_code":"KY8
+        6BP","premises":"100","address_line_2":"Lower Largo","address_line_1":"Main
+        Street","country":"Scotland","locality":"Leven"},"kind":"searchresults#company","date_of_creation":"2020-09-16","company_number":"SC674432","company_status":"active","description":"SC674432
+        - Incorporated on 16 September 2020","matches":{"title":[1,4],"snippet":[]},"company_type":"ltd","title":"HOKO
+        BUILD LTD","links":{"self":"/company/SC674432"},"description_identifier":["incorporated-on"],"snippet":""},{"matches":{"snippet":[],"title":[1,4]},"company_type":"ltd","title":"HOKO
+        DESIGN LTD","links":{"self":"/company/SC531509"},"description_identifier":["incorporated-on"],"snippet":"","address_snippet":"100  Main
+        Street, Lower Largo, Leven, Fife, Scotland, KY8 6BP","kind":"searchresults#company","address":{"country":"Scotland","locality":"Leven","address_line_2":"Lower
+        Largo","premises":"100 ","address_line_1":"Main Street","region":"Fife","postal_code":"KY8
+        6BP"},"date_of_creation":"2016-04-04","company_number":"SC531509","company_status":"active","description":"SC531509
+        - Incorporated on  4 April 2016"},{"matches":{"snippet":[],"title":[1,4]},"company_type":"ltd","title":"HOKO
+        HOLDINGS LIMITED","description_identifier":["incorporated-on"],"links":{"self":"/company/04327690"},"snippet":"","address_snippet":"Unit
+        1 Farrington Place, Rossendale Road Ind Est, Burnley, Lancashire, BB11 5TY","address":{"premises":"Unit
+        1","address_line_2":"Rossendale Road Ind Est","address_line_1":"Farrington
+        Place","locality":"Burnley","region":"Lancashire","postal_code":"BB11 5TY"},"kind":"searchresults#company","date_of_creation":"2001-11-23","company_status":"active","company_number":"04327690","description":"04327690
+        - Incorporated on 23 November 2001"},{"company_type":"ltd","matches":{"snippet":[],"title":[1,4]},"description_identifier":["incorporated-on"],"links":{"self":"/company/SC683767"},"snippet":"","title":"HOKO
+        SHOP LTD","kind":"searchresults#company","address":{"premises":"100","address_line_1":"Main
+        Street","locality":"Leven","country":"United Kingdom","postal_code":"KY8 6BP"},"address_snippet":"100
+        Main Street, Leven, United Kingdom, KY8 6BP","description":"SC683767 - Incorporated
+        on 15 December 2020","date_of_creation":"2020-12-15","company_number":"SC683767","company_status":"active"},{"title":"HOKO
+        AGENCY LIMITED","snippet":"","links":{"self":"/company/10659513"},"description_identifier":["dissolved-on"],"matches":{"snippet":[],"title":[1,4]},"company_type":"ltd","company_number":"10659513","company_status":"dissolved","date_of_creation":"2017-03-08","date_of_cessation":"2018-08-14","description":"10659513
+        - Dissolved on 14 August 2018","address_snippet":"17  Southland Road, Leicester,
+        England, LE2 3RJ","address":{"country":"England","locality":"Leicester","address_line_1":"Southland
+        Road","premises":"17 ","postal_code":"LE2 3RJ"},"kind":"searchresults#company"},{"address":{"postal_code":"W6
+        0SP","country":"England","locality":"London","premises":"280 ","address_line_1":"King
+        Street"},"kind":"searchresults#company","address_snippet":"280  King Street,
+        London, England, W6 0SP","description":"07611513 - Dissolved on  3 December
+        2013","date_of_creation":"2011-04-21","date_of_cessation":"2013-12-03","company_status":"dissolved","company_number":"07611513","company_type":"ltd","matches":{"snippet":[],"title":[1,4]},"description_identifier":["dissolved-on"],"links":{"self":"/company/07611513"},"snippet":"","title":"HOKO
+        GRP LTD"},{"matches":{"snippet":[],"title":[5,8]},"company_type":"ltd","title":"H
+        R HOKO LIMITED","snippet":"","links":{"self":"/company/07911734"},"description_identifier":["dissolved-on"],"address_snippet":"5  Castle
+        Street, Bridgwater, Somerset, TA6 3DD","address":{"region":"Somerset","postal_code":"TA6
+        3DD","address_line_1":"Castle Street","premises":"5 ","locality":"Bridgwater"},"kind":"searchresults#company","company_number":"07911734","company_status":"dissolved","date_of_cessation":"2020-09-29","date_of_creation":"2012-01-16","description":"07911734
+        - Dissolved on 29 September 2020"},{"matches":{"snippet":[],"title":[1,13]},"company_type":"oversea-company","title":"HOKOCHEMICALS
+        (UK) LTD. LIABL. CO.","snippet":"","links":{"self":"/company/FC038542"},"description_identifier":["first-uk-establishment-opened-on"],"external_registration_number":"102289711","address_snippet":"7
+        Pannerhofstrasse, Weggis, Canton Of Lucerne  6353, Switzerland","address":{"region":"Canton
+        Of Lucerne  6353","premises":"7","address_line_1":"Pannerhofstrasse","country":"Switzerland","locality":"Weggis"},"kind":"searchresults#company","company_number":"FC038542","company_status":"active","date_of_creation":"2021-04-01","description":"FC038542
+        - First UK establishment opened on  1 April 2021"},{"matches":{"snippet":[],"title":[1,13]},"company_type":"uk-establishment","title":"HOKOCHEMICALS
+        (UK) LTD. LIABL. CO.","description_identifier":["opened-on"],"links":{"self":"/company/BR023637"},"snippet":"","address_snippet":"Hockley
+        House.  Ashbrook Office Ark 3 Longstone Road, Manchester, M22 5LB","kind":"searchresults#company","address":{"postal_code":"M22
+        5LB","premises":"Hockley House.  Ashbrook Office Ark 3 Longstone Road","locality":"Manchester"},"date_of_creation":"2021-04-01","company_number":"BR023637","company_status":"open","description":"BR023637
+        - Opened on  1 April 2021"},{"description_identifier":["incorporated-on"],"links":{"self":"/company/11215527"},"snippet":"","title":"HOKODO
+        LTD","company_type":"ltd","matches":{"title":[1,6],"snippet":[]},"description":"11215527
+        - Incorporated on 20 February 2018","date_of_creation":"2018-02-20","company_number":"11215527","company_status":"active","address":{"country":"United
+        Kingdom","locality":"London","premises":"35 ","address_line_1":"Kingsland
+        Road","postal_code":"E2 8AA"},"kind":"searchresults#company","address_snippet":"35  Kingsland
+        Road, London, United Kingdom, E2 8AA"},{"description":"11351988 - Incorporated
+        on  9 May 2018","date_of_creation":"2018-05-09","company_status":"active","company_number":"11351988","address":{"postal_code":"E2
+        8AA","country":"England","locality":"London","address_line_1":"Kingsland Road","premises":"35"},"kind":"searchresults#company","address_snippet":"35
+        Kingsland Road, London, England, E2 8AA","links":{"self":"/company/11351988"},"description_identifier":["incorporated-on"],"snippet":"","title":"HOKODO
+        SERVICES LTD","company_type":"ltd","matches":{"snippet":[],"title":[1,6]}},{"description":"11427727
+        - Incorporated on 21 June 2018","company_number":"11427727","company_status":"active","date_of_creation":"2018-06-21","address":{"postal_code":"CW12
+        1GJ","region":"Cheshire","locality":"Congleton","country":"England","address_line_1":"Adler
+        Road","premises":"17"},"kind":"searchresults#company","address_snippet":"17
+        Adler Road, Congleton, Cheshire, England, CW12 1GJ","snippet":"","description_identifier":["incorporated-on"],"links":{"self":"/company/11427727"},"title":"HOKOKO
+        LIMITED","company_type":"ltd","matches":{"title":[1,6],"snippet":[]}},{"snippet":"","description_identifier":["incorporated-on"],"links":{"self":"/company/08385146"},"title":"HOKOLO
+        LTD.","company_type":"ltd","matches":{"title":[1,6],"snippet":[]},"description":"08385146
+        - Incorporated on  1 February 2013","company_number":"08385146","company_status":"active","date_of_creation":"2013-02-01","kind":"searchresults#company","address":{"postal_code":"SE21
+        8SE","locality":"London","country":"England","address_line_1":"Little Bornes","premises":"8"},"address_snippet":"8
+        Little Bornes, London, England, SE21 8SE"},{"company_number":"10146954","company_status":"active","date_of_creation":"2016-04-26","description":"10146954
+        - Incorporated on 26 April 2016","address_snippet":"20 St John''s Wood Terrace,
+        London, United Kingdom, NW8 6JL","address":{"address_line_1":"St John''s Wood
+        Terrace","premises":"20","locality":"London","country":"United Kingdom","postal_code":"NW8
+        6JL"},"kind":"searchresults#company","title":"HOKORI LIMITED","snippet":"","links":{"self":"/company/10146954"},"description_identifier":["incorporated-on"],"matches":{"snippet":[],"title":[1,6]},"company_type":"ltd"},{"address_snippet":"8
+        Hilton Road, Cliffe Woods, Rochester, England, ME3 8LA","address":{"address_line_2":"Cliffe
+        Woods","premises":"8","address_line_1":"Hilton Road","locality":"Rochester","country":"England","postal_code":"ME3
+        8LA"},"kind":"searchresults#company","company_number":"12377101","company_status":"dissolved","date_of_cessation":"2021-06-29","date_of_creation":"2019-12-24","description":"12377101
+        - Dissolved on 29 June 2021","matches":{"title":[1,8],"snippet":[]},"company_type":"ltd","title":"HOKOZOKA
+        MPM LIMITED","snippet":"","links":{"self":"/company/12377101"},"description_identifier":["dissolved-on"]},{"links":{"self":"/company/08519126"},"description_identifier":["dissolved-on"],"snippet":"","title":"HOKONUI
+        CONSULTANCY LIMITED","company_type":"ltd","matches":{"snippet":[],"title":[1,7]},"description":"08519126
+        - Dissolved on 26 March 2019","date_of_creation":"2013-05-07","date_of_cessation":"2019-03-26","company_status":"dissolved","company_number":"08519126","address":{"address_line_1":"Stamford
+        Square","premises":"2 ","locality":"London","postal_code":"SW15 2BF"},"kind":"searchresults#company","address_snippet":"2  Stamford
+        Square, London, SW15 2BF"},{"description":"06092650 - Dissolved on 21 January
+        2014","date_of_cessation":"2014-01-21","date_of_creation":"2007-02-09","company_number":"06092650","company_status":"dissolved","address":{"country":"United
+        Kingdom","locality":"London","premises":"123 ","address_line_1":"Westminster
+        Bridge Road","postal_code":"SE1 7HR"},"kind":"searchresults#company","address_snippet":"123  Westminster
+        Bridge Road, London, United Kingdom, SE1 7HR","description_identifier":["dissolved-on"],"links":{"self":"/company/06092650"},"snippet":"","title":"HOKOL
+        LIMITED","company_type":"ltd","matches":{"title":[1,5],"snippet":[]}}],"kind":"search#all","items_per_page":20,"total_results":46,"page_number":1,"start_index":0}'
+    http_version:
+  recorded_at: Wed, 15 Sep 2021 08:29:49 GMT
 - request:
     method: get
     uri: https://api.companieshouse.gov.uk/search?items_per_page&q=HOKO&start_index
@@ -151,136 +154,38 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Authorization:
-      - Basic dTRTSFFVZGhLSHFZODVWcTc5TTB6SFhzWGl3cmFYOTJXek9pdUhwcTo=
-      User-Agent:
-      - Faraday v0.15.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.companieshouse.gov.uk
   response:
     status:
-      code: 200
-      message: OK
+      code: 401
+      message: Unauthorized
     headers:
       Date:
-      - Wed, 02 May 2018 11:35:15 GMT
+      - Wed, 15 Sep 2021 08:29:50 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '11286'
+      - '58'
       Connection:
       - keep-alive
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Headers:
-      - X-RateLimit-Query, origin, content-type, content-length, user-agent, host,
-        accept, authorization
-      Access-Control-Expose-Headers:
-      - Location,www-authenticate,cache-control,pragma,content-type,expires,last-modified
-      - X-RateLimit-Window, X-RateLimit-Limit, X-RateLimit-Remain, X-RateLimit-Reset,
-        Location, www-authenticate, cache-control, pragma, content-type, expires,
-        last-modified
-      Access-Control-Max-Age:
-      - '3600'
-      Cache-Control:
-      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
-      Pragma:
-      - no-cache
-      X-Ratelimit-Limit:
-      - '600'
-      X-Ratelimit-Remain:
-      - '594'
-      X-Ratelimit-Reset:
-      - '1525261021'
-      X-Ratelimit-Window:
-      - 5m
+      Access-Control-Allow-Origin:
+      - "*"
+      Ch-Authentication-Error:
+      - Empty Authorization header
+      Www-Authenticate:
+      - Invalid or no Authorisation header has been provided
       Server:
       - CompaniesHouse
     body:
       encoding: UTF-8
-      string: '{"start_index":0,"page_number":1,"total_results":28,"items_per_page":20,"items":[{"links":{"self":"/company/09525857"},"description_identifier":["incorporated-on"],"date_of_creation":"2015-04-02","address_snippet":"JAG
-        SHAW BAKER, Berners House, 47-48 Berners Street, London, W1T 3NF","kind":"searchresults#company","company_number":"09525857","description":"09525857
-        - Incorporated on  2 April 2015","company_status":"active","address":{"locality":"London","premises":"Berners
-        House","postal_code":"W1T 3NF","care_of_name":"JAG SHAW BAKER","address_line_1":"47-48
-        Berners Street"},"company_type":"ltd","title":"HOKO LTD","snippet":"","matches":{"title":[1,4],"snippet":[]}},{"snippet":"","title":"HOKO
-        AGENCY LIMITED","company_type":"ltd","matches":{"snippet":[],"title":[1,4]},"company_status":"active","description":"10659513
-        - Incorporated on  8 March 2017","address":{"postal_code":"LE2 3RJ","premises":"17","address_line_1":"Southland
-        Road","locality":"Leicester","country":"England"},"company_number":"10659513","links":{"self":"/company/10659513"},"date_of_creation":"2017-03-08","address_snippet":"17
-        Southland Road, Leicester, England, LE2 3RJ","kind":"searchresults#company","description_identifier":["incorporated-on"]},{"company_number":"SC531509","links":{"self":"/company/SC531509"},"description_identifier":["incorporated-on"],"date_of_creation":"2016-04-04","address_snippet":"100
-        Main Street, Lower Largo, Leven, Fife, Scotland, KY8 6BP","kind":"searchresults#company","company_type":"ltd","title":"HOKO
-        DESIGN LTD","snippet":"","matches":{"title":[1,4],"snippet":[]},"description":"SC531509
-        - Incorporated on  4 April 2016","company_status":"active","address":{"address_line_1":"Main
-        Street","premises":"100","postal_code":"KY8 6BP","country":"Scotland","region":"Fife","locality":"Leven","address_line_2":"Lower
-        Largo"}},{"matches":{"snippet":[],"title":[1,6]},"snippet":"","title":"HOKODO
-        LTD","company_type":"ltd","address":{"postal_code":"N1 7GU","premises":"20-22","address_line_1":"Wenlock
-        Road","locality":"London","country":"England"},"company_status":"active","description":"11215527
-        - Incorporated on 20 February 2018","company_number":"11215527","date_of_creation":"2018-02-20","address_snippet":"20-22
-        Wenlock Road, London, England, N1 7GU","kind":"searchresults#company","description_identifier":["incorporated-on"],"links":{"self":"/company/11215527"}},{"company_number":"04327690","description_identifier":["incorporated-on"],"date_of_creation":"2001-11-23","address_snippet":"Unit
-        1 Farrington Place, Rossendale Road Ind Est, Burnley, Lancashire, BB11 5TY","kind":"searchresults#company","links":{"self":"/company/04327690"},"matches":{"title":[1,4],"snippet":[]},"title":"HOKO
-        HOLDINGS LIMITED","company_type":"ltd","snippet":"","address":{"address_line_1":"Farrington
-        Place","premises":"Unit 1","postal_code":"BB11 5TY","region":"Lancashire","locality":"Burnley","address_line_2":"Rossendale
-        Road Ind Est"},"description":"04327690 - Incorporated on 23 November 2001","company_status":"active"},{"company_status":"active","description":"08385146
-        - Incorporated on  1 February 2013","address":{"postal_code":"SE21 8SE","premises":"8
-        ","address_line_1":"Little Bornes","locality":"London","country":"England"},"snippet":"","title":"HOKOLO
-        LTD.","company_type":"ltd","matches":{"snippet":[],"title":[1,6]},"links":{"self":"/company/08385146"},"date_of_creation":"2013-02-01","address_snippet":"8  Little
-        Bornes, London, England, SE21 8SE","kind":"searchresults#company","description_identifier":["incorporated-on"],"company_number":"08385146"},{"snippet":"","company_type":"ltd","title":"HOKONUI
-        CONSULTANCY LIMITED","matches":{"title":[1,7],"snippet":[]},"company_status":"active","description":"08519126
-        - Incorporated on  7 May 2013","address":{"locality":"London","postal_code":"SW15
-        2BF","premises":"2","address_line_1":"Stamford Square"},"company_number":"08519126","links":{"self":"/company/08519126"},"date_of_creation":"2013-05-07","address_snippet":"2
-        Stamford Square, London, SW15 2BF","kind":"searchresults#company","description_identifier":["incorporated-on"]},{"links":{"self":"/company/10146954"},"address_snippet":"20  St
-        John''s Wood Terrace, London, United Kingdom, NW8 6JL","date_of_creation":"2016-04-26","kind":"searchresults#company","description_identifier":["incorporated-on"],"company_number":"10146954","company_status":"active","description":"10146954
-        - Incorporated on 26 April 2016","address":{"country":"United Kingdom","locality":"London","address_line_1":"St
-        John''s Wood Terrace","postal_code":"NW8 6JL","premises":"20 "},"snippet":"","title":"HOKORI
-        LIMITED","company_type":"ltd","matches":{"snippet":[],"title":[1,6]}},{"links":{"self":"/company/06092650"},"date_of_creation":"2007-02-09","address_snippet":"123  Westminster
-        Bridge Road, London, United Kingdom, SE1 7HR","kind":"searchresults#company","description_identifier":["dissolved-on"],"company_number":"06092650","date_of_cessation":"2014-01-21","company_status":"dissolved","description":"06092650
-        - Dissolved on 21 January 2014","address":{"country":"United Kingdom","locality":"London","address_line_1":"Westminster
-        Bridge Road","premises":"123 ","postal_code":"SE1 7HR"},"snippet":"","company_type":"ltd","title":"HOKOL
-        LIMITED","matches":{"snippet":[],"title":[1,5]}},{"title":"HOKO GRP LTD","company_type":"ltd","snippet":"","matches":{"title":[1,4],"snippet":[]},"description":"07611513
-        - Dissolved on  3 December 2013","company_status":"dissolved","address":{"country":"England","locality":"London","address_line_1":"King
-        Street","postal_code":"W6 0SP","premises":"280 "},"company_number":"07611513","date_of_cessation":"2013-12-03","links":{"self":"/company/07611513"},"description_identifier":["dissolved-on"],"address_snippet":"280  King
-        Street, London, England, W6 0SP","date_of_creation":"2011-04-21","kind":"searchresults#company"},{"company_type":"ltd","title":"H
-        R HOKO LIMITED","snippet":"","matches":{"snippet":[],"title":[5,8]},"description":"07911734
-        - Incorporated on 16 January 2012","company_status":"active","address":{"locality":"Bridgwater","region":"Somerset","premises":"5
-        ","postal_code":"TA6 3DD","address_line_1":"Castle Street"},"company_number":"07911734","links":{"self":"/company/07911734"},"description_identifier":["incorporated-on"],"date_of_creation":"2012-01-16","address_snippet":"5  Castle
-        Street, Bridgwater, Somerset, TA6 3DD","kind":"searchresults#company"},{"address":{"locality":"Warminster","country":"United
-        Kingdom","postal_code":"BA12 9BR","premises":"Ground Floor 28 Station Road","address_line_1":"Wiltshire"},"description":"10507417
-        - Incorporated on  1 December 2016","company_status":"active","company_type":"ltd","title":"H
-        OKOLIE 7448 LTD","description_identifier":["incorporated-on"],"date_of_creation":"2016-12-01","kind":"searchresults#company","address_snippet":"Ground
-        Floor 28 Station Road Wiltshire, Warminster, United Kingdom, BA12 9BR","links":{"self":"/company/10507417"},"company_number":"10507417"},{"links":{"self":"/company/08063081"},"description_identifier":["incorporated-on"],"date_of_creation":"2012-05-09","address_snippet":"2
-        Poolway Place, Coleford, England, GL16 8DF","kind":"searchresults#company","company_number":"08063081","description":"08063081
-        - Incorporated on  9 May 2012","company_status":"active","address":{"country":"England","locality":"Coleford","address_line_1":"Poolway
-        Place","postal_code":"GL16 8DF","premises":"2"},"company_type":"ltd","title":"HO
-        KOON LIMITED"},{"company_number":"09239098","date_of_cessation":"2016-03-29","links":{"self":"/company/09239098"},"kind":"searchresults#company","date_of_creation":"2014-09-29","address_snippet":"18  Third
-        Avenue, Leeds, England, LS12 1LA","description_identifier":["dissolved-on"],"snippet":"","title":"MUHINDO
-        HOKOKO TRANSPORT LIMITED","company_type":"ltd","matches":{"snippet":[],"title":[9,14]},"company_status":"dissolved","description":"09239098
-        - Dissolved on 29 March 2016","address":{"address_line_1":"Third Avenue","premises":"18
-        ","postal_code":"LS12 1LA","country":"England","locality":"Leeds"}},{"title":"Bert
-        HOKOJOKU","address":{"premises":"78","address_line_1":"Cort Van Der Lindenlaan","locality":"Ca
-        Naarden","country":"1412"},"description_identifiers":["appointment-count","born-on"],"description":"Total
-        number of appointments 1 - Born February 1973","address_snippet":"78 Cort
-        Van Der Lindenlaan, Ca Naarden, Netherlands, 1412","kind":"searchresults#officer","links":{"self":"/officers/nvp07URMn3jm8HFmmzpdpVy1htQ/appointments"},"appointment_count":1,"date_of_birth":{"year":1973,"month":2}},{"appointment_count":1,"links":{"self":"/officers/kYbSS-OefvPEmtDk5Q4nGt7m42U/appointments"},"date_of_birth":{"month":6,"year":1985},"kind":"searchresults#officer","address_snippet":"20
-        Bob Massey Close, Manchester, United Kingdom, M11 2JA","description":"Total
-        number of appointments 1 - Born June 1985","description_identifiers":["appointment-count","born-on"],"address":{"premises":"20","address_line_1":"Bob
-        Massey Close","locality":"Manchester","country":"M11 2JA"},"title":"Atia HOKOKO"},{"date_of_birth":{"month":4,"year":1976},"links":{"self":"/officers/EZsnsosWCrngUghmbPt_f26EjlI/appointments"},"appointment_count":0,"address_snippet":"Suite
-        8, Room 2, Brackenholme Business Park Brackenholme, Selby, England, YO8 6EL","kind":"searchresults#officer","description_identifiers":["appointment-count","born-on"],"description":"Total
-        number of appointments 0 - Born April 1976","address":{"address_line_1":"Brackenholme","premises":"Suite
-        8, Room 2, Brackenholme Business Park","country":"YO8 6EL","locality":"Selby"},"title":"Muhindo
-        HOKOKO"},{"date_of_birth":{"month":5,"year":1989},"appointment_count":1,"links":{"self":"/officers/Aqjp0kxmTtgoBZCaNOD4H5hiqtQ/appointments"},"address_snippet":"152
-        Blackley New Road, Manchester, Lancashire, United Kingdom, M9 8EG","kind":"searchresults#officer","description_identifiers":["appointment-count","born-on"],"description":"Total
-        number of appointments 1 - Born May 1989","address":{"region":"Lancashire","country":"M9
-        8EG","locality":"Manchester","address_line_1":"Blackley New Road","premises":"152"},"title":"Tresor
-        HOKOKO"},{"title":"Memory HOKONYA","address":{"address_line_1":"Ducketts Apartments","premises":"Flat
-        30","region":"Tower Hamlets","country":"E3 2NA","address_line_2":"1 Wick Lane
-        Bow","locality":"London"},"description":"Total number of appointments 0 -
-        Born November 1968","description_identifiers":["appointment-count","born-on"],"address_snippet":"Flat
-        30 Ducketts Apartments, 1 Wick Lane Bow, London, Tower Hamlets, United Kingdom,
-        E3 2NA","kind":"searchresults#officer","date_of_birth":{"month":11,"year":1968},"appointment_count":0,"links":{"self":"/officers/NtU9HNvWjnwkVnR7TMkT0n0ZR_c/appointments"}},{"kind":"searchresults#officer","address_snippet":"78
-        Littlefield Road, Stopsley, Luton, Bedfordshire, United Kingdom, LU2 9BU","appointment_count":1,"links":{"self":"/officers/0oP8BKI6j_N4yw--1MYOxL2dZvU/appointments"},"title":"Nothando
-        HOKONYA","address":{"region":"Bedfordshire","country":"LU2 9BU","address_line_2":"Stopsley","locality":"Luton","address_line_1":"Littlefield
-        Road","premises":"78"},"description_identifiers":["appointment-count"],"description":"Total
-        number of appointments 1"}],"kind":"search#all"}'
-    http_version: 
-  recorded_at: Wed, 02 May 2018 11:35:15 GMT
-recorded_with: VCR 4.0.0
+      string: '{"error":"Empty Authorization header","type":"ch:service"}'
+    http_version:
+  recorded_at: Wed, 15 Sep 2021 08:29:50 GMT
+recorded_with: VCR 5.0.0
