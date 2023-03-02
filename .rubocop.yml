@@ -24,6 +24,3 @@ Lint/UselessAssignment:
 
 RSpec/ExampleLength:
   Max: 100
-
-RSpec/MultipleExpectations:
-  Enabled: false

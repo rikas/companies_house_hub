@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'faraday'
-require 'faraday_middleware'
 require 'companies_house_hub/configuration'
 require 'companies_house_hub/base_model'
 require 'companies_house_hub/errors'
@@ -20,8 +19,7 @@ module CompaniesHouseHub
 
   def connection
     @connection ||= Faraday.new(url: API_URL) do |conn|
-      conn.basic_auth(configuration.api_key, '')
-      conn.use FaradayMiddleware::ParseJson
+      conn.request :authorization, :basic, configuration.api_key, ''
       conn.response :json, parser_options: { symbolize_names: true }
       conn.response :logger if configuration.debug?
       conn.adapter Faraday.default_adapter
